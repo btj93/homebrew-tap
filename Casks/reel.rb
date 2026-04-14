@@ -1,6 +1,6 @@
 cask "reel" do
-  version "0.2.0"
-  sha256 "5939eede6f8a6742a06fc0d033d954c684104b8037033423edd60fca133b051b"
+  version "0.2.1"
+  sha256 "9179a7bbc0a1b47258281c764d31b68032593504cb53627860ac14a1d79d761c"
 
   url "https://github.com/btj93/reel/releases/download/v#{version}/Reel.app.zip"
   name "Reel"
