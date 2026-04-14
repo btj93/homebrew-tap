@@ -12,5 +12,10 @@ cask "reel" do
   app "Reel.app"
   binary "#{appdir}/Reel.app/Contents/MacOS/reel-msg"
 
+  preflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{staged_path}/Reel.app"]
+  end
+
   zap trash: "~/.config/reel"
 end
