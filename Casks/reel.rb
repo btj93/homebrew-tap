@@ -7,7 +7,7 @@ cask "reel" do
   desc "Scrollable tiling window manager for macOS"
   homepage "https://github.com/btj93/reel"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Reel.app"
   binary "#{appdir}/Reel.app/Contents/MacOS/reel-msg"
