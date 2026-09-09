@@ -4,7 +4,7 @@ cask "reel" do
 
   url "https://github.com/btj93/reel/releases/download/v#{version}/Reel.app.zip"
   name "Reel"
-  desc "Scrollable tiling window manager for macOS"
+  desc "Scrollable tiling window manager"
   homepage "https://github.com/btj93/reel"
 
   depends_on macos: :sonoma
@@ -12,9 +12,8 @@ cask "reel" do
   app "Reel.app"
   binary "#{appdir}/Reel.app/Contents/MacOS/reel-msg"
 
-  preflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{staged_path}/Reel.app"]
+  preflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{staged_path}}/Reel.app"]
   end
 
   zap trash: "~/.config/reel"
